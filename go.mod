@@ -1,3 +1,3 @@
-module github.com/maximilian-skowron/go-coin-lore-client
+module github.com/skowrons/go-coin-lore-client
 
 go 1.15
