@@ -7,14 +7,14 @@ import (
 
 func TestGetCoin(t *testing.T) {
 	c := NewClient(BaseURL)
-	coinId := "90"
+	coinID := "90"
 
-	coin, err := c.GetCoin(context.TODO(), coinId)
+	coin, err := c.GetCoin(context.TODO(), coinID)
 	if err != nil {
 		t.Errorf("GetCoin errored with: %s", err.Error())
 	}
-	if coin.Id != coinId {
-		t.Errorf("Expected coin id: %s; Got: %s", coinId, coin.Id)
+	if coin.ID != coinID {
+		t.Errorf("Expected coin id: %s; Got: %s", coinID, coin.ID)
 	}
 }
 

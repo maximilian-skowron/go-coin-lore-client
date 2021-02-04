@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// CryptoMarketInfo holds informations about the general crypto market.
 type CryptoMarketInfo struct {
 	CoinsCount       int     `json:"coins_count"`
 	ActiveMarkets    int     `json:"active_markets"`
@@ -19,6 +20,7 @@ type CryptoMarketInfo struct {
 	McapAth          float64 `json:"mcap_ath"`
 }
 
+// GetCryptoMarket will return information about the crypto market.
 func (c Client) GetCryptoMarket(ctx context.Context) (*CryptoMarketInfo, error) {
 	url := fmt.Sprintf("%s/global/", c.BaseURL)
 
