@@ -7,7 +7,7 @@ https://www.coinlore.com/cryptocurrency-data-api
 
 Create a client object:
 ```go
-import "coinlore"
+import "github.com/skowrons/go-coin-lore-client/coinlore"
 
 client := coinlore.NewClient(coinlore.BaseURL)
 ```
