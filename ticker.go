@@ -19,7 +19,7 @@ type TickerOptions struct {
 
 // SetLimit set the limit to the provided value or otherwise to the default value of 100.
 func (to *TickerOptions) SetLimit(limit int) {
-	if limit > defaultLimit {
+	if limit > defaultLimit || limit <= 0 {
 		log.Println("limit max is 100 and will set automatically to 100")
 		limit = defaultLimit
 	}
