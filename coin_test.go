@@ -18,4 +18,3 @@ func TestClient_GetMarketsForCoin(t *testing.T) {
 		t.Errorf("Expected active market >0; Got: %d", len(markets))
 	}
 }
-
