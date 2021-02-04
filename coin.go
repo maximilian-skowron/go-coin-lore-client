@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// Market represents a market for crypto currency.
 type Market struct {
 	Name      string  `json:"name"`
 	Base      string  `json:"base"`
@@ -16,6 +17,7 @@ type Market struct {
 	Time      int64   `json:"time"`
 }
 
+// GetMarketsForCoin will return a slice of Market that handle the provided coin.
 func (c Client) GetMarketsForCoin(ctx context.Context, id string) ([]Market, error) {
 	url := fmt.Sprintf("%s/coin/markets/?id=%s", c.BaseURL, id)
 
